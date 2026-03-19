@@ -37,3 +37,4 @@ app.include_router(payments.router)
 @app.get("/health")
 async def health():
     return {"status": "ok", "service": config.APP_NAME}
+app.include_router(meal_plan.router, prefix='/api/v1')
